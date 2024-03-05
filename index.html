@@ -3,50 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Serie</title>
 </head>
 <body>
-    <h1>Temporada 2</h1>
+    <h1>Machos alfa</h1>
 
-    <!-- Capítulo 1 -->
-    <h2>Capítulo 1</h2>
-    <iframe src="https://drive.google.com/file/d/1yMSBxiU4VCU1MgfdOTMAjpiOWOIphU8d/preview" width="640" height="480"></iframe>
+    <!-- Botón para ver los capítulos en línea -->
+    <button onclick="showOnline()">Ver en Línea</button>
 
-    <!-- Capítulo 2 -->
-    <h2>Capítulo 2</h2>
-    <iframe src="https://drive.google.com/file/d/1yFSwj-r8glxrjABEBcsKAwlPKD0o0Npu/preview" width="640" height="480"></iframe>
+    <!-- Botón para acceder a la lista de capítulos en texto y enlace a Google Drive -->
+    <button onclick="showDrive()">Ver en Google Drive</button>
 
-    <!-- Capítulo 3 -->
-    <h2>Capítulo 3</h2>
-    <iframe src="https://drive.google.com/file/d/1y8gNA4rPKI8a51_ARXGs7TwNUb4BxqXC/preview" width="640" height="480"></iframe>
+    <!-- Div para mostrar los capítulos en línea -->
+    <div id="online" style="display:none;">
+        <!-- Capítulo 1 -->
+        <h2>Capítulo 1</h2>
+        <iframe src="https://drive.google.com/file/d/1yMSBxiU4VCU1MgfdOTMAjpiOWOIphU8d/preview" width="640" height="480"></iframe>
 
-    <!-- Capítulo 4 -->
-    <h2>Capítulo 4</h2>
-    <iframe src="https://drive.google.com/file/d/1yVzbd2eNjPiD_FyC7D2KBK4_dm5_AqmK/preview" width="640" height="480"></iframe>
+        <!-- Capítulo 2 -->
+        <h2>Capítulo 2</h2>
+        <iframe src="https://drive.google.com/file/d/1yFSwj-r8glxrjABEBcsKAwlPKD0o0Npu/preview" width="640" height="480"></iframe>
 
-    <!-- Capítulo 5 -->
-    <h2>Capítulo 5</h2>
-    <iframe src="https://drive.google.com/file/d/1yHduwtR4i0coH5xIDU-xbBpjZvhVcMiS/preview" width="640" height="480"></iframe>
+        <!-- Capítulo 3 -->
+        <h2>Capítulo 3</h2>
+        <iframe src="https://drive.google.com/file/d/1y8gNA4rPKI8a51_ARXGs7TwNUb4BxqXC/preview" width="640" height="480"></iframe>
 
-    <!-- Capítulo 6 -->
-    <h2>Capítulo 6</h2>
-    <iframe src="https://drive.google.com/file/d/1y459T8He7zdOIB5bH6NpaneIJDDPDksN/preview" width="640" height="480"></iframe>
+        <!-- Capítulo 4 -->
+        <h2>Capítulo 4</h2>
+        <iframe src="https://drive.google.com/file/d/1yVzbd2eNjPiD_FyC7D2KBK4_dm5_AqmK/preview" width="640" height="480"></iframe>
 
-    <!-- Capítulo 7 -->
-    <h2>Capítulo 7</h2>
-    <iframe src="https://drive.google.com/file/d/1yLZYrQz9SvrkBRVxUtgCLK_96aKD0wBn/preview" width="640" height="480"></iframe>
+        <!-- Capítulo 5 -->
+        <h2>Capítulo 5</h2>
+        <iframe src="https://drive.google.com/file/d/1yHduwtR4i0coH5xIDU-xbBpjZvhVcMiS/preview" width="640" height="480"></iframe>
 
-    <!-- Capítulo 8 -->
-    <h2>Capítulo 8</h2>
-    <iframe src="https://drive.google.com/file/d/1yaKTlam3mwnaaHK6FDQA4ODNNMiPMa7d/preview" width="640" height="480"></iframe>
+        <!-- Capítulo 6 -->
+        <h2>Capítulo 6</h2>
+        <iframe src="https://drive.google.com/file/d/1y459T8He7zdOIB5bH6NpaneIJDDPDksN/preview" width="640" height="480"></iframe>
 
-    <!-- Capítulo 9 -->
-    <h2>Capítulo 9</h2>
-    <iframe src="https://drive.google.com/file/d/1yUIcQJxWwejj6o3uV9Blu4pgv8gNQmM6/preview" width="640" height="480"></iframe>
+        <!-- Capítulo 7 -->
+        <h2>Capítulo 7</h2>
+        <iframe src="https://drive.google.com/file/d/1yLZYrQz9SvrkBRVxUtgCLK_96aKD0wBn/preview" width="640" height="480"></iframe>
 
-    <!-- Capítulo 10 -->
-    <h2>Capítulo 10</h2>
-    <iframe src="https://drive.google.com/file/d/1yf5a9FTjcUmJhifJ137jThi6Ut8gxPJC/preview" width="640" height="480"></iframe>
+        <!-- Capítulo 8 -->
+        <h2>Capítulo 8</h2>
+        <iframe src="https://drive.google.com/file/d/1yaKTlam3mwnaaHK6FDQA4ODNNMiPMa7d/preview" width="640" height="480"></iframe>
 
+        <!-- Capítulo 9 -->
+        <h2>Capítulo 9</h2>
+        <iframe src="https://drive.google.com/file/d/1yUIcQJxWwejj6o3uV9Blu4pgv8gNQmM6/preview" width="640" height="480"></iframe>
+
+        <!-- Capítulo 10 -->
+        <h2>Capítulo 10</h2>
+        <iframe src="https://drive.google.com/file/d/1yf5a9FTjcUmJhifJ137jThi6Ut8gxPJC/preview" width="640" height="480"></iframe>
+    </div>
+
+    <!-- Div para mostrar el enlace a Google Drive -->
+    <div id="drive" style="display:none;">
+        <h2>Lista de Capítulos en Google Drive:</h2>
+        <ul>
+            <li><a href="https://drive.google.com/file/d/1yMSBxiU4VCU1MgfdOTMAjpiOWOIphU8d/view?usp=drivesdk">Capítulo 1</a></li>
+            <li><a href="https://drive.google.com/file/d/1yFSwj-r8glxrjABEBcsKAwlPKD0o0Npu/view?usp=drivesdk">Capítulo 2</a></li>
+            <li><a href="https://drive.google.com/file/d/1y8gNA4rPKI8a51_ARXGs7TwNUb4BxqXC/view?usp=drivesdk">Capítulo 3</a></li>
+            <li><a href="https://drive.google.com/file/d/1yVzbd2eNjPiD_FyC7D2KBK4_dm5_AqmK/view?usp=drivesdk">Capítulo 4</a></li>
+            <li><a href="https://drive.google.com/file/d/1yHduwtR4i0coH5xIDU-xbBpjZvhVcMiS/view?usp=drivesdk">Capítulo 5</a></li>
+            <li><a href="https://drive.google.com/file/d/1y459T8He7zdOIB5bH6NpaneIJDDPDksN/view?usp=drivesdk">Capítulo 6</a></li>
+            <li><a href="https://drive.google.com/file/d/1yLZYrQz9SvrkBRVxUtgCLK_96aKD0wBn/view?usp=drivesdk">Capítulo 7</a></li>
+            <li><a href="https://drive.google.com/file/d/1yaKTlam3mwnaaHK6FDQA4ODNNMiPMa7d/view?usp=drivesdk">Capítulo 8</a></li>
+            <li><a href="https://drive.google.com/file/d/1yUIcQJxWwejj6o3uV9Blu4pgv8gNQmM6/view?usp=drivesdk">Capítulo 9</a></li>
+            <li><a href="https://drive.google.com/file/d/1yf5a9FTjcUmJhifJ137jThi6Ut8gxPJC/view?usp=drivesdk">Capítulo 10</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function showOnline() {
+            document.getElementById("online").style.display ="block";
+            document.getElementById("drive").style.display = "none";
+        }
+
+        function showDrive() {
+            document.getElementById("drive").style.display = "block";
+            document.getElementById("online").style.display = "none";
+        }
+    </script>
 </body>
 </html>
