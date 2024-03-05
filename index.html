@@ -8,54 +8,71 @@
 <body>
     <h1>Machos alfa</h1>
 
+    <!-- Selección de capítulo -->
+    <label for="capitulo">Selecciona el número del capítulo:</label>
+    <select id="capitulo">
+        <option value="1">Capítulo 1</option>
+        <option value="2">Capítulo 2</option>
+        <option value="3">Capítulo 3</option>
+        <option value="4">Capítulo 4</option>
+        <option value="5">Capítulo 5</option>
+        <option value="6">Capítulo 6</option>
+        <option value="7">Capítulo 7</option>
+        <option value="8">Capítulo 8</option>
+        <option value="9">Capítulo 9</option>
+        <option value="10">Capítulo 10</option>
+    </select>
+
+    <!-- Botón para ver el capítulo seleccionado -->
+    <button onclick="verCapitulo()">Ver Capítulo</button>
+
+    <!-- Div para mostrar el capítulo -->
+    <div id="capituloMostrado"></div>
+
+    <script>
+        var capitulos = [
+            "https://drive.google.com/file/d/1yMSBxiU4VCU1MgfdOTMAjpiOWOIphU8d/preview",
+            "https://drive.google.com/file/d/1yFSwj-r8glxrjABEBcsKAwlPKD0o0Npu/preview",
+            "https://drive.google.com/file/d/1y8gNA4rPKI8a51_ARXGs7TwNUb4BxqXC/preview",
+            "https://drive.google.com/file/d/1yVzbd2eNjPiD_FyC7D2KBK4_dm5_AqmK/preview",
+            "https://drive.google.com/file/d/1yHduwtR4i0coH5xIDU-xbBpjZvhVcMiS/preview",
+            "https://drive.google.com/file/d/1y459T8He7zdOIB5bH6NpaneIJDDPDksN/preview",
+            "https://drive.google.com/file/d/1yLZYrQz9SvrkBRVxUtgCLK_96aKD0wBn/preview",
+            "https://drive.google.com/file/d/1yaKTlam3mwnaaHK6FDQA4ODNNMiPMa7d/preview",
+            "https://drive.google.com/file/d/1yUIcQJxWwejj6o3uV9Blu4pgv8gNQmM6/preview",
+            "https://drive.google.com/file/d/1yf5a9FTjcUmJhifJ137jThi6Ut8gxPJC/preview"
+        ];
+
+        var indiceActual = 0;
+
+        function verCapitulo() {
+            var seleccion = document.getElementById("capitulo").value;
+            indiceActual = parseInt(seleccion) - 1;
+            mostrarCapitulo();
+        }
+
+        function mostrarCapitulo() {
+            var urlCapitulo = capitulos[indiceActual];
+            document.getElementById("capituloMostrado").innerHTML = "<iframe src='" + urlCapitulo + "' width='640' height='480'></iframe>";
+        }
+
+        function siguienteCapitulo() {
+            indiceActual++;
+            if (indiceActual < capitulos.length) {
+                mostrarCapitulo();
+            } else {
+                alert("¡No hay más capítulos!");
+            }
+        }
+    </script>
+
+    <!-- Botón para ir al siguiente capítulo -->
+    <button onclick="siguienteCapitulo()">Siguiente</button>
+</body>
+</html>
     <!-- Botón para ver los capítulos en línea -->
-    <button onclick="showOnline()">Ver en Línea</button>
+    <button onclick="showdrive()">Ver en Línea</button>
 
-    <!-- Botón para acceder a la lista de capítulos en texto y enlace a Google Drive -->
-    <button onclick="showDrive()">Ver en Google Drive</button>
-
-    <!-- Div para mostrar los capítulos en línea -->
-    <div id="online" style="display:none;">
-        <!-- Capítulo 1 -->
-        <h2>Capítulo 1</h2>
-        <iframe src="https://drive.google.com/file/d/1yMSBxiU4VCU1MgfdOTMAjpiOWOIphU8d/preview" width="640" height="480"></iframe>
-
-        <!-- Capítulo 2 -->
-        <h2>Capítulo 2</h2>
-        <iframe src="https://drive.google.com/file/d/1yFSwj-r8glxrjABEBcsKAwlPKD0o0Npu/preview" width="640" height="480"></iframe>
-
-        <!-- Capítulo 3 -->
-        <h2>Capítulo 3</h2>
-        <iframe src="https://drive.google.com/file/d/1y8gNA4rPKI8a51_ARXGs7TwNUb4BxqXC/preview" width="640" height="480"></iframe>
-
-        <!-- Capítulo 4 -->
-        <h2>Capítulo 4</h2>
-        <iframe src="https://drive.google.com/file/d/1yVzbd2eNjPiD_FyC7D2KBK4_dm5_AqmK/preview" width="640" height="480"></iframe>
-
-        <!-- Capítulo 5 -->
-        <h2>Capítulo 5</h2>
-        <iframe src="https://drive.google.com/file/d/1yHduwtR4i0coH5xIDU-xbBpjZvhVcMiS/preview" width="640" height="480"></iframe>
-
-        <!-- Capítulo 6 -->
-        <h2>Capítulo 6</h2>
-        <iframe src="https://drive.google.com/file/d/1y459T8He7zdOIB5bH6NpaneIJDDPDksN/preview" width="640" height="480"></iframe>
-
-        <!-- Capítulo 7 -->
-        <h2>Capítulo 7</h2>
-        <iframe src="https://drive.google.com/file/d/1yLZYrQz9SvrkBRVxUtgCLK_96aKD0wBn/preview" width="640" height="480"></iframe>
-
-        <!-- Capítulo 8 -->
-        <h2>Capítulo 8</h2>
-        <iframe src="https://drive.google.com/file/d/1yaKTlam3mwnaaHK6FDQA4ODNNMiPMa7d/preview" width="640" height="480"></iframe>
-
-        <!-- Capítulo 9 -->
-        <h2>Capítulo 9</h2>
-        <iframe src="https://drive.google.com/file/d/1yUIcQJxWwejj6o3uV9Blu4pgv8gNQmM6/preview" width="640" height="480"></iframe>
-
-        <!-- Capítulo 10 -->
-        <h2>Capítulo 10</h2>
-        <iframe src="https://drive.google.com/file/d/1yf5a9FTjcUmJhifJ137jThi6Ut8gxPJC/preview" width="640" height="480"></iframe>
-    </div>
 
     <!-- Div para mostrar el enlace a Google Drive -->
     <div id="drive" style="display:none;">
@@ -75,10 +92,7 @@
     </div>
 
     <script>
-        function showOnline() {
-            document.getElementById("online").style.display ="block";
-            document.getElementById("drive").style.display = "none";
-        }
+        
 
         function showDrive() {
             document.getElementById("drive").style.display = "block";
