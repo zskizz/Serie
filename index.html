@@ -85,5 +85,30 @@
             document.getElementById("online").style.display = "none";
         }
     </script>
+    <script>
+    function showOnlineV2() {
+        var capitulos = [
+            "https://drive.google.com/file/d/1yMSBxiU4VCU1MgfdOTMAjpiOWOIphU8d/preview",
+            "https://drive.google.com/file/d/1yFSwj-r8glxrjABEBcsKAwlPKD0o0Npu/preview",
+            "https://drive.google.com/file/d/1y8gNA4rPKI8a51_ARXGs7TwNUb4BxqXC/preview",
+            "https://drive.google.com/file/d/1yVzbd2eNjPiD_FyC7D2KBK4_dm5_AqmK/preview",
+            "https://drive.google.com/file/d/1yHduwtR4i0coH5xIDU-xbBpjZvhVcMiS/preview",
+            "https://drive.google.com/file/d/1y459T8He7zdOIB5bH6NpaneIJDDPDksN/preview",
+            "https://drive.google.com/file/d/1yLZYrQz9SvrkBRVxUtgCLK_96aKD0wBn/preview",
+            "https://drive.google.com/file/d/1yaKTlam3mwnaaHK6FDQA4ODNNMiPMa7d/preview",
+            "https://drive.google.com/file/d/1yUIcQJxWwejj6o3uV9Blu4pgv8gNQmM6/preview",
+            "https://drive.google.com/file/d/1yf5a9FTjcUmJhifJ137jThi6Ut8gxPJC/preview"
+        ];
+
+        var seleccion = prompt("Elige el número del capítulo que deseas ver (1-10):");
+        if (seleccion >= 1 && seleccion <= 10) {
+            var indice = seleccion - 1;
+            var urlCapitulo = capitulos[indice];
+            document.getElementById("online").innerHTML = "<iframe src='" + urlCapitulo + "' width='640' height='480'></iframe>";
+        } else {
+            alert("Número de capítulo inválido.");
+        }
+    }
+    </script>
 </body>
 </html>
